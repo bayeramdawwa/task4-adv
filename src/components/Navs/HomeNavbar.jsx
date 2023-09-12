@@ -56,21 +56,28 @@ export default function HomeNavbar() {
       <div className={`fixcednav  ${show && 'navback' || navbarOpen && 'navback'}`}>
         <h3 className="logo">Learner</h3>
         <ul className={`${navbarOpen ? ' linkmenu show' : 'linkmenu '}`}>
+          
           <li>
             <Link to="task4-adv" className="link"
               onClick={() => { top() }}
             >Home
             </Link>
           </li>
+          
           <li><button className="btn-dropdown">Dropdown <BiSolidDownArrow /></button></li>
+          
           <li><a className="link" href="">Our Staff</a></li>
+          
           <li><Link to="/task4-adv/news" className="link"
             onClick={() => { top() }}
           >News</Link></li>
+          
           <li><a className="link" href="">Galary</a></li>
+          
           <li><Link to="/task4-adv/about" className="link"
             onClick={() => { top() }}
           >About</Link></li>
+
           <li><a className="link" href="">Contact</a></li>
         </ul>
 
