@@ -1,12 +1,11 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import "./styles/HomeNavStyle.css";
 import { BsQuestionCircle, BsFillTelephoneFill, BsMailbox2 } from "react-icons/bs";
 import { BiSolidDownArrow } from "react-icons/bi";
 import { FaAlignJustify } from "react-icons/fa";
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
 
 export default function HomeNavbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -53,12 +52,12 @@ export default function HomeNavbar() {
       <div className={`fixcednav  ${show  && 'navback' || navbarOpen && 'navback'}`}>
         <h3 className="logo">Learner</h3>
         <ul className={`${navbarOpen ? ' linkmenu show' : 'linkmenu '}`}>
-          <li><a className="link" href="">Home</a></li>
+          <li><Link to ="" className="link" href="">Home</Link></li>
           <li><button className="btn-dropdown">Dropdown <BiSolidDownArrow /></button></li>
           <li><a className="link" href="">Our Staff</a></li>
-          <li><a className="link" href="">News</a></li>
+          <li><Link to ="/news" className="link" href="">News</Link></li>
           <li><a className="link" href="">Gallary</a></li>
-          <li><a className="link" href="">About</a></li>
+          <li><Link to ="/about" className="link" href="">About</Link></li>
           <li><a className="link" href="">Contact</a></li>
         </ul>
 

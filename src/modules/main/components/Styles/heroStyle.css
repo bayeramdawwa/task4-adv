@@ -1,7 +1,7 @@
 .HERO{
     width: 100%;
     height: 100vh;
-  
+    overflow-x: hidden;
     position: relative;
 }
 .HERO .heroIMG{
@@ -27,6 +27,7 @@
 .HERO p{
    font-weight: 500;
    font-size: 20px;
+   padding: 0 10%;
 
 }
 .HERO h1{

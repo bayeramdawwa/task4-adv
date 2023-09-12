@@ -1,6 +1,5 @@
 .navbar {
     width: 100%;
-    padding: 10px 3%;
     position: fixed;
     z-index: 3;
 
@@ -11,7 +10,18 @@
     justify-content: space-between;
     width: 100%;
     color: #fff;
-    padding: 0 2%;
+    padding: 10px 10%;
+    position: relative;
+     
+}
+.navbar .headernav::before {
+ content: "";
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ border-bottom: 1px solid rgb(223, 221, 221);
+
      
 }
 
@@ -21,6 +31,7 @@
 
 .navbar .headernav .contact {
     display: flex;
+
     justify-content: space-between;
     color: #fff;
     align-items: center;
@@ -53,11 +64,12 @@
 
 .navbar .fixcednav {
     display: flex;
+    margin: 10px 10%;
     position: sticky;
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px 2%;
+    
     transition: all 0.3s ease;
     height: max-content;
 }
@@ -67,6 +79,7 @@
     border-radius: 8px;
     margin-top: 10px;
     border: none;
+    padding: 20px 2% ;
 }
 
 .navbar .fixcednav .logo {
@@ -130,16 +143,53 @@
     margin-left: 50px;
 }
 
-@media screen and (max-width:900px) {
+
+@media screen and (max-width:1024px) {
+
+
+   
+    .navbar .headernav .contact p {
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .navbar .headernav .account {
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+
+    .navbar .headernav .account a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .navbar .fixcednav .logo {
+        font-size: 30px;
+    }
+
+    .navbar .fixcednav .toggle {
+        font-size: 20px;
+
+    }
+}
+@media screen and (max-width:950px) {
     .navbar .fixcednav {
         display: flex;
         position: sticky;
         width: 100%;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 20px 2%;
-    }
 
+    }
+    .navbar .fixcednav .logo {
+        font-size: 30px;
+    }
+    .navbar .fixcednav .toggle {
+        font-size: 30px;
+
+    }
     .navbar .fixcednav .linkmenu {
     
         justify-content: center;
@@ -194,10 +244,14 @@
         display: block;
     }
 }
-
 @media screen and (max-width:800px) {
-
-
+    .navbar .headernav {
+        padding: 10px 5%;  
+    }
+    .navbar .fixcednav {
+        margin: 10px 5%;
+    
+    }
     .navbar .headernav .contact {
         gap: 10px;
         flex-direction: column;
@@ -205,29 +259,13 @@
         align-items: flex-start;
     }
 
-    .navbar .headernav .contact p {
-        font-size: 10px;
-        gap: 5px;
-    }
-
-    .navbar .headernav .account {
-        flex-wrap: wrap;
-        gap: 10px;
-
-    }
-
-    .navbar .headernav .account a {
-        font-size: 12px;
-        font-weight: 500;
-        color: #fff;
-    }
-
     .navbar .fixcednav .logo {
         font-size: 20px;
     }
-
     .navbar .fixcednav .toggle {
         font-size: 20px;
 
     }
+
+   
 }
