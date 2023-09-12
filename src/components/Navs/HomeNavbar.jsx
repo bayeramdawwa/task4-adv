@@ -31,10 +31,14 @@ export default function HomeNavbar() {
       return () => {
         window.removeEventListener('scroll', controlNavbar);
       };
+
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
   }, []);
 
-
+  function top() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
 
   return (
     <div className="navbar">
@@ -49,15 +53,24 @@ export default function HomeNavbar() {
           <a className="accountLINK" href="">Register</a>
         </div>
       </div>
-      <div className={`fixcednav  ${show  && 'navback' || navbarOpen && 'navback'}`}>
+      <div className={`fixcednav  ${show && 'navback' || navbarOpen && 'navback'}`}>
         <h3 className="logo">Learner</h3>
         <ul className={`${navbarOpen ? ' linkmenu show' : 'linkmenu '}`}>
-          <li><Link to ="" className="link" href="">Home</Link></li>
+          <li>
+            <Link to="" className="link"
+              onClick={() => { top() }}
+            >Home
+            </Link>
+          </li>
           <li><button className="btn-dropdown">Dropdown <BiSolidDownArrow /></button></li>
           <li><a className="link" href="">Our Staff</a></li>
-          <li><Link to ="/news" className="link" href="">News</Link></li>
-          <li><a className="link" href="">Gallary</a></li>
-          <li><Link to ="/about" className="link" href="">About</Link></li>
+          <li><Link to="/news" className="link"
+            onClick={() => { top() }}
+          >News</Link></li>
+          <li><a className="link" href="">Galary</a></li>
+          <li><Link to="/about" className="link"
+            onClick={() => { top() }}
+          >About</Link></li>
           <li><a className="link" href="">Contact</a></li>
         </ul>
 
